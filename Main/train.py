@@ -1,5 +1,5 @@
 # Credits to Andrej Karpathy
-
+import torch
 with open ('Input1_Shake.txt', 'r', encoding = 'utf-8') as f:
     text = f.read()
 
@@ -19,7 +19,6 @@ decode = lambda l: ''.join([itos[i] for i in l])
 print(encode("hii there"))
 print(decode(encode("hii there")))
 
-import torch
 data = torch.tensor(encode(text), dtype=torch.long)
 print(data.shape, data.dtype)
 
